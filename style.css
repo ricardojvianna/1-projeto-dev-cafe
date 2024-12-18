@@ -1,0 +1,426 @@
+/* 
+Rem - é uma unidade de medida relativa em CSS que significa "root em" e representa o tamanho da fonte do elemento-raiz do documento. 
+O rem é uma unidade escalável, ou seja, varia de acordo com a dimensão root do navegador. Por padrão, 1rem é igual a 16px, mas pode variar se o tamanho da fonte raiz for alterado. 
+O rem é útil para criar layouts mais flexíveis e escaláveis, podendo ser usado em margens, padding, larguras e alturas. É especialmente útil em projetos responsivos, pois permite que os elementos se ajustem conforme o tamanho da tela e do dispositivo. 
+*/ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* suaviza o rolamento do scroll */
+}
+
+/*body {
+    overflow: hidden; /* não deixa aparecer a barra de rolagem do rodape 
+}
+*/
+
+header {
+    background-image: linear-gradient(to right, #4a1e1b, #4a1e1be6);
+    color: white;
+    padding: 0 2rem; /* coloca padding 0 em cima e embaixo e 2rem dos lados */
+    height: 4.8rem;
+    display: grid;
+    align-items: center;
+}
+
+.container-header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-logo {
+    display: flex;
+    margin: 0 10px;
+}
+
+.div-logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.5rem;
+    padding: 0 20px 5px 0;
+    font-family: "Pacifico",cursive;
+}
+
+.div-logo-img {
+    width: 3.5rem;
+    border-radius: 50%;
+    transform: scale(1.25);
+    animation: balanco 2s linear infinite; }
+
+@keyframes balanco {
+    
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(20deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.div-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 5px;
+}
+
+.button-list {
+    background-color: #784538;
+    color: white;
+    padding: 5px 1rem;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.button-list:hover {
+    transform: scale(1.05); /* altera o tamanho do botão na função hover */
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row; /* coloca em linha - row = linha*/
+    list-style-type: none; /* tira os pontinhos da lista */
+    gap: 2rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffffb3;
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.menu-link:hover {
+    color: white;
+    transition-duration: 500ms;
+}
+
+.img-button-links {
+    margin-left: 8px;
+}
+
+main {
+    min-height: 600px;
+    padding: 0 50px;
+    background-color: #270c03;
+    display: flex;
+    justify-content: center; /* alinha os itens ao centro horizontalmente */
+    align-items: center ; /* alinha os itens ao centro verticalmente */
+    color: white;
+}
+
+.container-home {
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.img-home {
+    width: 550px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.div-text-home {
+    text-align: start;
+}
+
+.h1-text-home {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.span-h1-home {
+    font-family: "Pacifico", cursive;
+    color: #854d3d;
+}
+
+.button-home {
+    background: linear-gradient(to right, #854d3d, #4a1e1b);
+    border: 2px solid #854d3d;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05); /* esse é um jeito diferente de aplicar o efeito
+        hover nesse botão, usando já dentro da própria estilização aqui. */
+    }
+}
+
+.img-home {
+    width: 550px;
+    transform: scale(1.25);
+    animation: balanco 5s linear infinite; /* aqui ele ativa a animação de balançar 
+    a xícara, criando um movimento médio que demora 5 segundos, podendo aumentar ou
+    diminuir, linear e infinito sem pausas */
+}
+
+@keyframes balanco {
+    
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(15deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+/* aqui foi criada a animação da xicara, onde quando ela se inicia
+o tamanho dela de aumentar em 0% ele fica sem rodar, ao chegar em 50% do tamanho
+ela gira 15deg e finalmente quando atinge o tamanho máximo de 100%, ela volta a
+posição natural que estava. */ 
+}
+
+/* ****************     Section       ************** */ 
+
+.section-services {
+    padding: 2.5rem 3rem;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+.container-services {
+    text-align: center;
+    margin: 0 auto 5rem;
+    padding: 0 3rem;
+}
+
+.title-section-services {
+    font-size: 2.25rem;
+    font-weight: bold;
+    font-family: "Pacifico", cursive;
+    color: #2d3748;
+}
+
+.div-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    place-items: center;
+}
+
+.service-card {
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0.025 1 rem rgba(0, 0, 0, 0.15); /* colocamos a sombra da borda*/
+    transition: all 0.5s ease;
+    max-width: 300px;
+    position: relative;
+}
+
+.service-card:hover {
+    background-color: #854d3d;
+    color: white;
+}
+
+.div-card-image {
+    height: 122px;
+}
+
+.image-card {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    transform: translate(-3.5rem);
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+.service-card:hover .image-card {
+    transform: translateY(-3.5rem) scale(1.05) rotate(6deg);
+}
+
+.div-text-services-card {
+    padding: 1rem; text-align: center;
+}
+
+.h1-card-service {
+    font-size: 1.25rem;
+    font-family: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.p-card-service {
+    color: #6b7280;
+    transition: all 0.7s ease;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    overflow: hidden;
+    display: -webkit-box;    /* coloca 3 pontinhos quando o texto for grande */ 
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+}
+
+.service-card:hover .p-card-service{
+    color: #ffffff;
+}
+
+footer {
+    background-color: #270c03;
+    min-height: 150px;
+    padding: 1rem;
+}
+
+.div-logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-footer {
+    height: 4rem;
+}
+
+.p-footer {
+    color: white;
+    margin: 1rem;
+}
+
+/*  ###################    Responsividade     ######################*/
+
+@media screen and (max-width: 871px) {
+    .div-logo a {
+        font-size: 1.4rem;
+    }
+    
+    .menu-link {
+        display: none;
+    }
+}
+
+@media screnn and (max-width: 575px) {
+    header {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 1137px) {
+    .h1-text-home {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 1069px) {
+    .h1-text-home {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (max-width: 1035px) {
+    .h1-text-home {
+        font-size: 3.1rem;
+    }
+    .img-home {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        min-height: 550px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .div-text-home {
+        text-align: center;
+    }
+
+    .h1-text-home {
+        font-size: 3.6rem;
+    }
+
+    .img-home {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+   .container-home {
+    padding: 50px 0;
+   }
+
+   .h1-text-home {
+    font-size: 3rem;
+   } 
+
+   .img-home {
+    width: 350px;
+   }
+
+}
+
+@media screen and (max-width: 460px) {
+    .h1-text-home {
+        font-size: 2.2rem;
+    }
+    
+    .img-home {
+        width: 250px;
+    }
+ 
+ }
+
+ @media screen and (max-width: 740px) {
+    .div-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.5rem;
+    }
+ 
+ }
+
+ @media screen and (max-width: 552px) {
+    .div-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3.5rem;
+    }
+ 
+ }
